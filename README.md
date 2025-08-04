@@ -1,42 +1,33 @@
 # Algorithms-and-Data-Structures 
 
-- # 🤖💭✨ [00. Generic LLM Prompt](./00.%20LLM%20Prompts/LLM%20Prompt:%20Generic%20LeetCode%20Pattern%20Guide%20Generator.md)
+- # 🤖💭✨ [00. Generic LLM Prompts](./00.%20LLM%20Prompts/LLM%20Prompt:%20Generic%20LeetCode%20Pattern%20Guide%20Generator.md)
 - # 👉👈🎯 [01. Two Pointers]()
 - # 🐰🐢⚡ [02. Fast and Slow Pointers]()
 - # 🪟🔄📱 [03. Sliding Window]()
-- # 🔗⏰📊 [04. Merge Intervals](./03.%20Merge%20Intervals/01.%20Introduction.md)
+- # 🔗⏰📊 [04. Merge Intervals ☑️ ](./03.%20Merge%20Intervals/README.md)
 - # 🌳🔄📊 [05. In-Place Manipulation of a Linked List]()
-- # ⚖️🏔️📊 [06. Heaps]()
+- # ⚖️🏔️📊 [06. Heaps 🏋]()
 - # 🔀🔗📊 [07. K-way Merge]()
 - # 🏆📊🔝 [08. Top K Elements]()
 - # 🔍🎯📊 [09. Modified Binary Search]()
 - # 🧮💭📋 [10. Subsets]()
 - # 🎯💡📈 [11. Greedy Techniques]()
 - # 🔙🎯📊 [12. Backtracking]()
-- # 💰🎒📈 [13. Dynamic Programming]()
+- # 💰🎒📈 [13. Dynamic Programming 🏋👈🏽](13.%20Dynamic%20Programming/README.md)
 - # 🔧📂🎯 [14. Cyclic Sort]()
 - # 📊🔗🎯 [15. Topological Sort]()
 - # 🔍📊🎯 [16. Sort and Search]()
 - # 🔢📊🎯 [17. Matrices]()
 - # 📚🔧📊 [18. Stacks]()
-- # 🌐📊🔗 [19. Graphs]()
-- # 🌲⬇️🔍 [20. Tree Depth-First Search]()
-
-- # 🌲🔍📋 [21. Tree Breadth-First Search]()
-
+- # 🌐📊🔗 [19. Graphs 🏋]()
+- # 🌲⬇️🔍 [20. Tree Depth-First Search 🏋]()
+- # 🌲🔍📋 [21. Tree Breadth-First Search 🏋]()
 - # 🌸🔢📊 [22. Trie]()
-
 - # 🗂️💾📊 [23. Hash Maps]()
-
 - # 📍🎯📊 [24. Knowing What to Track]()
-
 - # 🔗🗂️📊 [25. Union Find]()
-
 - # 🛠️📊💡 [26. Custom Data Structures]()
-
 - # ⚡🔧🎯 [27. Bitwise Manipulation]()
-
 - # 📐🔢📊 [28. Math and Geometry]()
-
 - # 🏆💪🎯 [29. Challenge Yourself]()
 - # 🚀🧠💎 [30. Advanced DSA]()

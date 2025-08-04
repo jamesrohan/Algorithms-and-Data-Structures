@@ -15,6 +15,8 @@
     - [3️⃣ **Meeting Rooms** (LC 252/253)](#3️⃣-meeting-rooms-lc-252253)
     - [4️⃣ **Interval Intersections** (LC 986)](#4️⃣-interval-intersections-lc-986)
     - [5️⃣ **Employee Free Time** (LC 759)](#5️⃣-employee-free-time-lc-759)
+    - [6️⃣ **Meeting Rooms III** (LC 2402)](#6️⃣-meeting-rooms-iii-lc-2402)
+    - [7️⃣ **Meeting Scheduler** (LC 1229)](#7️⃣-meeting-scheduler-lc-1229)
   - [🎨 Advanced Techniques](#-advanced-techniques)
     - [🔄 **Sweep Line Algorithm**](#-sweep-line-algorithm)
       - [🔬 **Detailed Sweep Line Breakdown**](#-detailed-sweep-line-breakdown)
@@ -142,28 +144,37 @@ def merge_intervals(intervals):
 
 
 ### 2️⃣ **Insert Interval** (LC 57)
-
 - Insert new interval into sorted list
 - **Key insight**: Split into 3 phases (before, overlapping, after)
 
 
 ### 3️⃣ **Meeting Rooms** (LC 252/253)
-
 - Determine if all meetings can fit in one room
 - Find minimum rooms needed
 - **Technique**: Two-pointer or heap approach
 
 
 ### 4️⃣ **Interval Intersections** (LC 986)
-
 - Find common time slots between two schedules
 - **Technique**: Two-pointer merge
 
 
 ### 5️⃣ **Employee Free Time** (LC 759)
-
 - Find gaps when all employees are free
 - **Technique**: Merge all busy times, then find gaps
+
+### 6️⃣ **Meeting Rooms III** (LC 2402) 
+- Find most used room given meeting schedules and n rooms.
+- Assign the smallest-index free room; if none are free, wait for the room that finishes earliest and start the meeting there (duration unchanged).
+- Track how many meetings each room hosts and return the busiest.
+- Time O(m log n), Space O(n) – two min-heaps: one for free rooms (by id), one for busy rooms (by end-time).
+
+### 7️⃣ **Meeting Scheduler** (LC 1229)
+- Find earliest common slot ≥ duration for two people.  
+- Two-pointer sweep over sorted availabilities.  
+- Find intersections(using two pointer or sort), output the first intersection that meets the target duration.
+- Two Pointer: Time O(m + n), Space O(1).
+- Sort: Time O((m + n)*log(m + n)), Space O(1).
 
 
 ## 🎨 Advanced Techniques
@@ -511,6 +522,28 @@ def mergeTwoIntervalLists(list1, list2):
     return merge_intervals(result)
 ```
 
+**🎯 Example 4: Meeting Scheduler (LC 1229)**
+
+```python
+class Solution:
+    def minAvailableDuration(self, slots1: List[List[int]], slots2: List[List[int]], duration: int) -> List[int]:
+        slots = slots1 + slots2
+        slots.sort()
+        print(slots)
+        prevStart, prevEnd = 0, 0
+        for start, end in slots:
+            #[a,b] [c,d] overlap if a <= d and c <= b
+            overlap = prevStart <= end and start <= prevEnd
+            if overlap: 
+                overlapStart, overlapEnd = max(start, prevStart), min (end, prevEnd)
+                if overlapEnd - overlapStart >= duration: 
+                    return [overlapStart, overlapStart + duration]
+                prevStart, prevEnd = min(start, prevStart), max (end, prevEnd)
+            else: 
+                prevStart, prevEnd = start, end
+        
+        return []
+```
 
 #### 🎯 **Two-Pointer Problem Examples**
 
@@ -736,6 +769,31 @@ class MyCalendarThree:
         return max_active
 ```
 
+**🎯 Example 5: Meeting Rooms III (LC 2402)**
+
+```python
+class Solution:
+    def mostBooked(self, n: int, meetings: List[List[int]]) -> int:
+        usedRooms, unusedRooms = [], [i for i in range(n)]
+        heapq.heapify(unusedRooms)
+        meetingRoomCounts = [0] * n
+        meetings.sort()
+
+        for start, end in meetings:
+            # used rooms = [end, room]
+            while usedRooms and usedRooms[0][0] <= start :
+                _, room = heapq.heappop(usedRooms)
+                heapq.heappush(unusedRooms, room)
+            if unusedRooms:
+                room = heapq.heappop(unusedRooms)
+                heapq.heappush(usedRooms, (end, room))
+            else:
+                room_availability, room = heapq.heappop(usedRooms)
+                heapq.heappush(usedRooms, (room_availability + end -start, room))
+            meetingRoomCounts[room] += 1
+        
+        return meetingRoomCounts.index(max(meetingRoomCounts))
+```
 
 #### 🎯 **Priority Queue/Heap Problem Examples**
 
