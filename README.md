@@ -1,6 +1,7 @@
 # Algorithms-and-Data-Structures 
 
-- # 🤖💭✨ [00. Generic LLM Prompts](./00.%20LLM%20Prompts/LLM%20Prompt:%20Generic%20LeetCode%20Pattern%20Guide%20Generator.md)
+- # 🤖💭✨ [00-A. Generic LLM Prompts](./00-A.%20LLM%20Prompts/)
+- # 🧱🔗⚙️ [00-B. Building Blocks](./00-B.%20Building%20Blocks/)
 - # 👉👈🎯 [01. Two Pointers **Week-1**]()
 - # 🐰🐢⚡ [02. Fast and Slow Pointers **Week-1**]()
 - # 🪟🔄📱 [03. Sliding Window ☑️ **Week-1**](./03.%20Sliding%20Window/README.md)
