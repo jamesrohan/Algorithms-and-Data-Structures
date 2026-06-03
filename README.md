@@ -11,7 +11,7 @@
 - # 🔀🔗📊 [07. K-way Merge **Week-3**]()
 - # 🏆📊🔝 [08. Top K Elements **Week-3**]()
 - # 🔍🎯📊 [09. Modified Binary Search **Week-3**]()
-- # 🧮💭📋 [10. Subsets **Week-4**]()
+- # 🧮💭📋 [10. Subsets **Week-4**](./10.%20Subsets/README.md)
 - # 🎯💡📈 [11. Greedy Techniques **Week-4**]()
 - # 🔙🎯📊 [12. Backtracking **Week-4**]()
 - # 💰🎒📈 [13. Dynamic Programming 🚧⏳🔄🔜 🇼🇮🇵 👈🏽 **Week-5**](13.%20Dynamic%20Programming/README.md)
